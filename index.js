@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { firestore } = require('../firebaseConfig'); // Adjust path as needed
+const { firestore } = require('./firebaseConfig'); // Adjust path as needed
 const { v4: uuidv4 } = require('uuid');
 
 // In-memory session storage (use Redis/database in production)
@@ -9,7 +9,7 @@ const sessions = {};
 // Language translations
 const translations = {
     en: {
-        welcome: "Welcome to Nanenane Fish Agent Portal! 🐟",
+        welcome: "Welcome to Nanenane Fish Agent Portal!",
         selectLanguage: "Select Language:",
         english: "English",
         swahili: "Swahili",
@@ -42,14 +42,14 @@ const translations = {
         phone: "Phone:",
         confirmationSms: "Your fish deposit has been recorded. You will receive a confirmation SMS shortly.",
         agentContact: "Our agent will contact you to verify the details. Please keep your fish ready for inspection.",
-        thankYou: "Thank you for using Nanenane Fish Agent Portal! 🐟",
+        thankYou: "Thank you for using Nanenane Fish Agent Portal!",
         invalidSelection: "Invalid selection. Please try again.",
         sessionError: "Session error. Please dial again to start over.",
         mainMenu: "Main Menu",
         step: "Step"
     },
     sw: {
-        welcome: "Karibu kwenye Nanenane Fish Agent Portal! 🐟",
+        welcome: "Karibu kwenye Nanenane Fish Agent Portal!",
         selectLanguage: "Chagua Lugha:",
         english: "Kiingereza",
         swahili: "Kiswahili",
@@ -82,7 +82,7 @@ const translations = {
         phone: "Simu:",
         confirmationSms: "Uwekaji wako wa samaki umerekodiwa. Utapokea ujumbe wa uthibitisho hivi karibuni.",
         agentContact: "Wakala wetu atawasiliana nawe kuthibitisha maelezo. Tafadhali weka samaki wako tayari kwa ukaguzi.",
-        thankYou: "Asante kwa kutumia Nanenane Fish Agent Portal! 🐟",
+        thankYou: "Asante kwa kutumia Nanenane Fish Agent Portal!",
         invalidSelection: "Uchaguzi si sahihi. Tafadhali jaribu tena.",
         sessionError: "Hitilafu ya kipindi. Tafadhali piga tena kuanza upya.",
         mainMenu: "Menyu Kuu",

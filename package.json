@@ -1,7 +1,7 @@
 {
   "name": "ussd-at",
   "version": "1.0.0",
-  "description": "",
+  "description": "USSD application for fish agent portal with multilingual support",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,9 @@
   "type": "commonjs",
   "dependencies": {
     "body-parser": "^2.2.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "firebase": "^11.8.1",
+    "firebase-admin": "^13.4.0",
+    "uuid": "^11.1.0"
   }
 }

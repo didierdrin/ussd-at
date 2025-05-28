@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { firestore } = require('../firebaseConfig'); // Adjust path as needed
+const { firestore } = require('./firebaseConfig'); // Adjust path as needed
 const { v4: uuidv4 } = require('uuid');
 
 // In-memory session storage (use Redis/database in production)

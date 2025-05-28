@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { firestore } = require('./firebaseConfig'); // Adjust path as needed
 const { v4: uuidv4 } = require('uuid');
+const { serverTimestamp } = require('firebase/firestore');
 
 // In-memory session storage (use Redis/database in production)
 const sessions = {};
@@ -105,7 +106,7 @@ async function saveUserData(userData) {
     try {
         await firestore.collection('usersNane').add({
             ...userData,
-            timestamp: admin.firestore.FieldValue.serverTimestamp()
+            timestamp: serverTimestamp() //admin.firestore.FieldValue.serverTimestamp()
         });
         console.log('User data saved successfully');
     } catch (error) {
@@ -119,7 +120,7 @@ async function saveInventoryData(inventoryData) {
     try {
         await firestore.collection('inventoryFisherNane').add({
             ...inventoryData,
-            timestamp: admin.firestore.FieldValue.serverTimestamp()
+            timestamp: serverTimestamp() //admin.firestore.FieldValue.serverTimestamp()
         });
         console.log('Inventory data saved successfully');
     } catch (error) {

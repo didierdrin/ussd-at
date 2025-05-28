@@ -351,7 +351,7 @@ ${getText(lang, 'enterWeight')}`;
                     fishType: session.fishType,
                     amountToBePaid: session.fishWeight * 10, // Example calculation
                     location: session.location,
-                    status: 'approved'
+                    status: 'pending'
                 };
 
                 // Save to Firebase
